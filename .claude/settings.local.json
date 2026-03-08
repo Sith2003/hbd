@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(timeout:*)",
+      "Bash(python -m yt_dlp:*)",
+      "Bash(npm install -g deno)",
+      "Bash(dir:*)"
+    ]
+  }
+}

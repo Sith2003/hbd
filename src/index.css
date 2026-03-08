@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Quicksand', system-ui, sans-serif;
+  background: linear-gradient(135deg, #FFF8E7 0%, #FFE4EC 100%);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 228, 236, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 192, 203, 0.8);
+  border-radius: 3px;
+}
+
+/* Balloon styles */
+.balloon {
+  position: fixed;
+  bottom: -150px;
+  width: 80px;
+  height: 100px;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+  z-index: 10;
+}
+
+.balloon::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 15px solid inherit;
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  width: 2px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Candle flame */
+.flame {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 20px;
+  background: linear-gradient(to top, #FF6B35, #FFD700, #FFF);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: flicker 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(-50%) scale(1) rotate(-2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(0.95) rotate(2deg);
+    opacity: 0.85;
+  }
+}
+
+/* Typewriter cursor */
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background: #333;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Photo gallery */
+.gallery-container {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-item {
+  scroll-snap-align: center;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.3s ease-in-out;
+}
