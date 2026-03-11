@@ -9,7 +9,7 @@ function Landing({ onStart }) {
 
         {/* Title */}
         <h1 className="text-4xl md:text-6xl font-bold text-pink-600 mb-4 font-display">
-          A Special Day
+          A Special Day Day
         </h1>
 
         <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-md mx-auto">
