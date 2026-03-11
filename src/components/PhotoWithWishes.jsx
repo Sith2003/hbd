@@ -79,7 +79,7 @@ const PhotoSection = memo(function PhotoSection() {
             <div className="relative overflow-hidden rounded-lg">
               {/* Photo */}
               <img
-                src="/photos/photo1.jpg"
+                src={`${import.meta.env.BASE_URL}photos/photo1.jpg`}
                 alt="May"
                 className={`w-full h-auto max-h-[50vh] object-contain transition-all duration-1000 ${
                   imageLoaded ? 'scale-100 opacity-100' : 'scale-95 opacity-0'

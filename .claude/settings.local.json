@@ -5,7 +5,11 @@
       "Bash(timeout:*)",
       "Bash(python -m yt_dlp:*)",
       "Bash(npm install -g deno)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(git:*)",
+      "Bash(npm run:*)",
+      "WebFetch(domain:sith2003.github.io)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ]
   }
 }

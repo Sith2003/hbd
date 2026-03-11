@@ -42,7 +42,7 @@ function MusicPlayer({ autoPlay }) {
       {/* Audio Element */}
       <audio
         ref={audioRef}
-        src="/music/birthday.webm"
+        src={`${import.meta.env.BASE_URL}music/birthday.webm`}
         loop
         onError={handleError}
         onPlay={() => setIsPlaying(true)}

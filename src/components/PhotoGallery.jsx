@@ -3,9 +3,9 @@ import { useState, useRef, useEffect } from 'react'
 // Add your photos here - place images in public/photos/ folder
 // Example: { src: '/photos/photo1.jpg', caption: 'A wonderful memory' }
 const PHOTOS = [
-  { src: '/photos/photo1.jpg', caption: 'Memory 1' },
-  { src: '/photos/photo2.jpg', caption: 'Memory 2' },
-  { src: '/photos/photo3.jpg', caption: 'Memory 3' },
+  { src: `${import.meta.env.BASE_URL}photos/photo1.jpg`, caption: 'Memory 1' },
+  { src: `${import.meta.env.BASE_URL}photos/photo2.jpg`, caption: 'Memory 2' },
+  { src: `${import.meta.env.BASE_URL}photos/photo3.webp`, caption: 'Memory 3' },
 ]
 
 function PhotoGallery() {
