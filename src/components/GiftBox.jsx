@@ -117,7 +117,7 @@ const GiftBox = memo(function GiftBox({ index, isLocked, isOpen, isSelected, onO
     'bg-pink-300',
   ]
 
-  const photoSrc = isSelected ? '/photos/photo2.jpg' : '/photos/photo3.webp'
+  const photoSrc = isSelected ? `${import.meta.env.BASE_URL}photos/photo2.jpg` : `${import.meta.env.BASE_URL}photos/photo3.webp`
   const borderColor = isSelected ? 'border-red-400' : 'border-yellow-300'
 
   return (
@@ -129,7 +129,7 @@ const GiftBox = memo(function GiftBox({ index, isLocked, isOpen, isSelected, onO
       {isLocked ? (
         <div className="animate-bounce-slow">
           <div className={`w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br ${colors[index]} rounded-lg shadow-lg relative overflow-hidden`}>
-            <img src="/photos/photo3.webp" alt="Locked Gift" className="w-full h-full object-cover opacity-40" />
+            <img src={`${import.meta.env.BASE_URL}photos/photo3.webp`} alt="Locked Gift" className="w-full h-full object-cover opacity-40" />
             <div className={`absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-3 ${ribbonColors[index]}`} />
             <div className={`absolute left-0 right-0 top-1/2 -translate-y-1/2 h-3 ${ribbonColors[index]}`} />
             <div className="absolute inset-0 flex items-center justify-center">
